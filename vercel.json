@@ -1,12 +1,4 @@
 {
-    "builds": [
-      { "src": "keystone.ts", "use": "@vercel/node" }
-    ],
-    "routes": [
-      { "src": "/(.*)", "dest": "keystone.ts" }
-    ],
-    "rewrites": [
-        { "source": "/admin/:path*", "destination": "/api/admin" }
-      ]
+    "source": "/feedback/(?!general)",
+    "destination": "/api/feedback/general"
   }
-  
